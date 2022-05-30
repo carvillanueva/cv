@@ -2,8 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+        <main-header></main-header>
+        <main-page></main-page>
+        <main-footer></main-footer>
+  `,
+  styles: [`
+  
+  `]
 })
 export class AppComponent {
   title = 'io';
