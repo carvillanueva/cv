@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="justify-content: right;">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="#">Home</a>
             <a class="nav-link" href="#portfolio">Work</a>
             <a class="nav-link" href="#">Resume</a>
             <a class="nav-link" href="#contact">Contact</a>
