@@ -161,7 +161,6 @@ import { Component, OnInit } from '@angular/core';
       <!-- /portfolio -->
       
       
-      <!-- <iframe id="contact" src="https://docs.google.com/forms/d/e/1FAIpQLSd74vnMAQpi6YDGIKqtMhpRCs0g_yxRPom9Wzqw4zFVv8xc3g/viewform?embedded=true" width="600" height="812" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
     <div class="container mx-auto my-5" id="contact" style="max-width:650px;">
       <div class="row p-4 align-items-center rounded-3 border shadow-lg">
         <div class="col-xs-12 p-3 text-center">
