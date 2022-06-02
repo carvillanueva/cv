@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
  
   `],
   template: `
-    <div class="container" id="resume">RESUME</div>
+    <div class="container" id="resume">
+      <div class="col-xs-12">
+        <img class="img-round" src="../assets/headshot.jpeg" alt="Head shot of Carlos">
+      </div>
+    </div>
   `
 })
 

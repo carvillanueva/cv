@@ -61,3 +61,7 @@
     background: lightgrey;
     color: #ffffff
 }
+
+.img-round {
+    border: 50%;
+}

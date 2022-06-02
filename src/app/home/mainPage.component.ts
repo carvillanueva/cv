@@ -63,7 +63,7 @@ import { Component, OnInit } from '@angular/core';
     <div class="row featurette container">
       <div class="col-md-5">
         <div class="image-holder">
-          <img src="../assets/profile.jpg" class="profile-img">
+          <img src="../assets/profile.jpg" class="profile-img" alt="Picture of Carlos">
         </div>
       </div>
       <div class="col-md-7 px-4 mt-4">
@@ -168,11 +168,11 @@ import { Component, OnInit } from '@angular/core';
           <p class="lead">Feel free to contact me with any questions you may have!</p>
           <span class="text-mute fs-6">Social Links</span>
           <div class="template-demo text-center mb-2"> 
-            <button onclick="window.location.href='https://github.com/carvillanueva';" class="btn btn-social-icon btn-github"><i class="fab fa-github"></i></button> 
-            <button onclick="window.location.href='https://www.linkedin.com/in/carlosivillanueva/';" class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></button> 
-            <button onclick="window.location.href='https://instagram.com';" class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></button>
+            <button class="btn btn-social-icon btn-github"><a href="https://github.com/carvillanueva" target="_blank"><i class="fab fa-github"></i></a></button> 
+            <button class="btn btn-social-icon btn-linkedin"><a href="https://www.linkedin.com/in/carlosivillanueva/" target="_blank"><i class="fa fa-linkedin"></i></a></button> 
+            <button class="btn btn-social-icon btn-instagram"><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></button>
             <button data-toggle="modal" data-target="#contact" class="btn btn-social-icon btn-other "><i class="fas fa-envelope"></i></button>
-            <button class="btn btn-social-icon btn-other"><a href="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf"></a><i class="fas fa-file-pdf"></i></button>
+            <button class="btn btn-social-icon btn-other"><a href="../assets/TEST.pdf" download="TEST.pdf"><i class="fas fa-file-pdf"></i></a></button>
           </div>
         </div>
         <form action=”mailto:carlos2villanueva@gmail.com” method="post" novalidate>
