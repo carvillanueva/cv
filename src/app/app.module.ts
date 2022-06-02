@@ -22,7 +22,7 @@ import { ResumeComponent } from './home/resume.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: MainPageComponent },
-      { path: '#resume', component: ResumeComponent },
+      { path: 'resume', component: ResumeComponent },
     ]),
   ],
   providers: [],
