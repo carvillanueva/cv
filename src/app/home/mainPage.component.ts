@@ -175,11 +175,16 @@ import { Component, OnInit } from '@angular/core';
             <button class="btn btn-social-icon btn-other"><a href="../assets/TEST.pdf" download="TEST.pdf"><i class="fas fa-file-pdf"></i></a></button>
           </div>
         </div>
-        <form action=”mailto:carlos2villanueva@gmail.com” method="post" novalidate>
-          <div class="row col-xs-12 g-3">
+        <form class="row col-xs-12 g-3" action="https://formsubmit.co/carlos2villanueva@gmail.com" method="POST">
+          <!-- HoneyPot -->
+          <input type="text" name="_honey" style="display:none">
+
+          <!-- Disable Captcha -->
+          <input type="hidden" name="_captcha" value="false">
+
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="John" value="" required>
+              <input type="text" class="form-control" id="firstName" placeholder="John" name="name" required>
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>
@@ -187,7 +192,7 @@ import { Component, OnInit } from '@angular/core';
 
             <div class="col-sm-6">
               <label for="lastName" class="form-label">Last name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="Doe" value="" required>
+              <input type="text" class="form-control" id="lastName" placeholder="Doe" name="Last&nbsp;Name" required>
               <div class="invalid-feedback">
                 Valid last name is required.
               </div>
@@ -195,7 +200,7 @@ import { Component, OnInit } from '@angular/core';
 
             <div class="col-12">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com" name="email" required>
               <div class="invalid-feedback">
                 Please enter a valid email address.
               </div>
@@ -203,7 +208,7 @@ import { Component, OnInit } from '@angular/core';
 
             <div class="col-12">
               <label for="address" class="form-label">Subject</label>
-              <input type="text" class="form-control" id="address" placeholder="Networking" required>
+              <input type="text" class="form-control" id="address" placeholder="Networking" name="subject" required>
               <div class="invalid-feedback">
                 Please enter a subject.
               </div>
@@ -211,7 +216,7 @@ import { Component, OnInit } from '@angular/core';
 
             <div class="col-12">
               <label class="form-label">Message</label>
-              <textarea type="text" class="form-control" row="4" placeholder="Do you want to be friends?:)" required></textarea>
+              <textarea type="text" class="form-control" row="5" placeholder="Do you want to be friends?:)" name="message" required></textarea>
               <div class="invalid-feedback">
                 Please enter a message.
               </div>
@@ -221,7 +226,6 @@ import { Component, OnInit } from '@angular/core';
               <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Send</button>
             </div>
             <p class="message-disclaimer text-muted fs-6">*Please allow 2 business days to respond. Thank you.</p>
-          </div>
         </form>
       </div>
     </div>
