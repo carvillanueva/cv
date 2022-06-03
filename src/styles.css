@@ -6,7 +6,7 @@
     /* background-color: #e6e7e7; */
   }
   .fadePage {
-    animation: fadeInAnimation ease 1.5s;
+    animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
   }

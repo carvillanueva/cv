@@ -11,6 +11,11 @@ import { Component, OnInit } from '@angular/core';
     .btn-social-icon a {
       color:white;
     }
+    .resume-category li {
+      list-style-type:none;
+      display:inline-block;
+      width:100%;
+    }
     .resume-category span:hover {
       background-color: lightgrey;
       transition: .5s ease-in-out;
@@ -22,13 +27,18 @@ import { Component, OnInit } from '@angular/core';
       font-size: 11px;
       padding-bottom: 5px;
     }
-    .experience-summary p {
+    .experience-summary li {
       margin-bottom:5px;
+      
+    }
+    .info-list li {
+      list-style-type:none;
+      display:inline-block;
     }
  
   `],
   template: `
-    <div class="container">
+    <div class="container fadePage">
       <div class="col-xs-12 text-center">
         <img class="img-round resume-img mb-2" src="../assets/images/headshot.jpeg" alt="Head shot of Carlos">
         <div class="template-demo text-center mb-2"> 
@@ -38,19 +48,23 @@ import { Component, OnInit } from '@angular/core';
           <button data-toggle="modal" data-target="#contact" class="btn btn-social-icon btn-other "><i class="fas fa-envelope"></i></button>
           <button class="btn btn-social-icon btn-other"><a href="../assets/TEST.pdf" download="TEST.pdf"><i class="fas fa-file-pdf"></i></a></button>
         </div>
-        <div class="text-muted fs-6 d-inline-flex">
-          <div>carlos2villanueva@gmail.com&nbsp;</div>
-          <div>&nbsp;-&nbsp; Birmingham, AL&nbsp;</div>
-          <div>&nbsp;-&nbsp; (205)-229-1304</div>
+        <div class="text-muted fs-6">
+          <ul class="info-list">
+            <li>carlos2villanueva@gmail.com &nbsp;</li>
+            <li>Birmingham, AL&nbsp;</li>
+            <li>(205)-229-1304</li>
+          </ul>
         </div>
       </div>
 
       <div class="col-xs-12">
-        <div class="d-flex justify-content-evenly mt-5 resume-category">
-          <span (click)="view = 'edu'">Education</span>
-          <span (click)="view = 'work'">Work Experience</span>
-          <span (click)="view = 'skills'">Skills/Certifcations</span>
-          <span (click)="view = 'future'">What's Next?</span>
+        <div class=" mt-5 resume-category">
+          <ul>
+            <li><span (click)="view = 'edu'">Education</span></li>
+            <li><span (click)="view = 'work'">Work Experience</span></li>
+            <li><span (click)="view = 'skills'">Skills/Certifcations</span></li>
+            <li> <span (click)="view = 'future'">What's Next?</span></li>
+          </ul>
         </div>
 
 
@@ -99,7 +113,8 @@ import { Component, OnInit } from '@angular/core';
 
         <!-- WORK EXPERIENCE -->
         <div *ngIf="view == 'work'" class="p-5">
-              <div class="row col-xs-12" style="border: solid 1px grey; background-color:grey;box-shadow: 5px 5px 12px 7px #0000003b;">
+              <div class="row col-xs-12" style="border: solid 1px grey; background-color:rgba(255,255,255,.1);
+;box-shadow: 5px 5px 12px 7px #0000003b;">
                 <div class="col-lg-2">aefgawef</div>
                 <div class="col-lg-10">
                   <div class="row experience-title">
@@ -144,24 +159,32 @@ import { Component, OnInit } from '@angular/core';
 
         <!-- SKILLS/CERTIFICATIONS -->
         <div *ngIf="view == 'skills'" class="row p-5">
-          <div class="card m-3" style="width: 18rem;">
-            <img src="../assets/images/th.jpeg" class="card-img-top" alt="Treehouse Logo">
-            <div class="card-body">
-              <h5 class="card-title">Treehouse</h5>
-              <p class="fw-light my-0 card-text">Front-End Web Development</p>
-              <p class="text-muted my-0 card-info">Issued Apr 2022 &#183; No Expiration Date</p>
-              <p class="text-muted my-0 card-info">Credential ID 50180579</p>
-              <a href="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/50180579" target="_blank" class="btn btn-sm btn-outline-secondary">Show Credntial <i class="fa fa-arrow-up-right-from-square"></i></a>
-            </div>
+          <div class="col-xs-12 col-lg-5">
+            <label><u>Skills</u></label>
+
+
           </div>
-          <div class="card m-3" style="width: 18rem;">
-            <img src="../assets/images/jpm.jpeg" style="min-height:150px" class="card-img-top" alt="JP Morgan & Co Logo">
-            <div class="card-body">
-              <h5 class="card-title">JPMorgan Chase & Co.</h5>
-              <p class="fw-light my-0 card-text">Software Engineering Virtual Experience</p>
-              <p class="text-muted my-0 card-info">Issued Sept 2022 &#183; No Expiration Date</p>
-              <p class="text-muted my-0 card-info">Credential ID 3fJbwYsQ7SJ37SRMm</p>
-              <a href="https://insidesherpa.s3.amazonaws.com/completion-certificates/J.P.%20Morgan/R5iK7HMxJGBgaSbvk_JPMorgan%20Chase_Sst7JECWfG4A2gBf5_1631666386348_completion_certificate.pdf" target="_blank" class="btn btn-sm btn-outline-secondary">Show Credntial <i class="fa fa-arrow-up-right-from-square"></i></a>
+          <div class="row col-xs-12 col-lg-7">
+            <label><u>Certifications</u></label>
+            <div class="card m-3" style="width: 18rem;">
+              <img src="../assets/images/th.jpeg" class="card-img-top" alt="Treehouse Logo">
+              <div class="card-body">
+                <h5 class="card-title">Treehouse</h5>
+                <p class="fw-light my-0 card-text">Front-End Web Development</p>
+                <p class="text-muted my-0 card-info">Issued Apr 2022 &#183; No Expiration Date</p>
+                <p class="text-muted my-0 card-info">Credential ID 50180579</p>
+                <a href="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/50180579" target="_blank" class="btn btn-sm btn-outline-secondary">Show Credntial <i class="fa fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <div class="card m-3" style="width: 18rem;">
+              <img src="../assets/images/jpm.jpeg" style="min-height:150px" class="card-img-top" alt="JP Morgan & Co Logo">
+              <div class="card-body">
+                <h5 class="card-title">JPMorgan Chase & Co.</h5>
+                <p class="fw-light my-0 card-text">Software Engineering Virtual Experience</p>
+                <p class="text-muted my-0 card-info">Issued Sept 2022 &#183; No Expiration Date</p>
+                <p class="text-muted my-0 card-info">Credential ID 3fJbwYsQ7SJ37SRMm</p>
+                <a href="https://insidesherpa.s3.amazonaws.com/completion-certificates/J.P.%20Morgan/R5iK7HMxJGBgaSbvk_JPMorgan%20Chase_Sst7JECWfG4A2gBf5_1631666386348_completion_certificate.pdf" target="_blank" class="btn btn-sm btn-outline-secondary">Show Credntial <i class="fa fa-arrow-up-right-from-square"></i></a>
+              </div>
             </div>
           </div>
         </div>
