@@ -1,6 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
-
+* {
+    margin: 0;
+    padding: 0;
+    /* background-color: #e6e7e7; */
+  }
+  .fadePage {
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
 
 /* SOCIAL MEDIA ICONS */
 .btn.btn-social-icon {

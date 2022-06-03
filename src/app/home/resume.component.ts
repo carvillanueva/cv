@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
       width: 200px;
       display:inline-block;
     }
-    a {
+    .btn-social-icon a {
       color:white;
     }
     .resume-category span:hover {
@@ -17,6 +17,13 @@ import { Component, OnInit } from '@angular/core';
       border-radius: 8px;
       padding-left: 3px;
       padding-right: 3px;
+    }
+    .card-info {
+      font-size: 11px;
+      padding-bottom: 5px;
+    }
+    .experience-summary p {
+      margin-bottom:5px;
     }
  
   `],
@@ -40,31 +47,80 @@ import { Component, OnInit } from '@angular/core';
 
       <div class="col-xs-12">
         <div class="d-flex justify-content-evenly mt-5 resume-category">
-          <span>Education</span>
-          <span>Work Experience</span>
-          <span>Skills/Certifcations</span>
-          <span>What's Next?</span>
+          <span (click)="view = 'edu'">Education</span>
+          <span (click)="view = 'work'">Work Experience</span>
+          <span (click)="view = 'skills'">Skills/Certifcations</span>
+          <span (click)="view = 'future'">What's Next?</span>
         </div>
 
-        <div class="p-5">
-          <div>
-            <label>Treehouse</label>
-            <span>Front End Web Development</span>
-            <span>April 2022</span>
-            <p>Completed self-paced (300 hour) technical certification in Fron End Software Engineering.</p>
-            <p>Will be creating various projects such as Responsive layout portfolio, Interactive photo gallery, Game show app, etc.</p>
-            <p>After Completion will be profiecnt in HTML, CSS, JavaScript, APIs, and React.</p>
+
+        <!-- EDUCATION -->
+        <div *ngIf="view == 'edu'" class="p-5">
+          <div class="row experience-title">
+            <div class="col-md-9">
+              <h4>Treehouse</h4>
+              <h5 class="fw-light">Front End Web Development</h5>
+            </div>
+            <div class="col-md-3">
+              <h5>April 2022</h5>
+            </div>
           </div>
-          <div>
-            <label>Mississippi State University</label>
-            <span>Bachelor of Science in BioChemistry</span>
-            <span>August 2020</span>
-            <p>Involvement: Lambda Sigma Honors Society, President Scholar, Phi Kappa Tau Fraternity, New Maroon Camp, Student Sucess Scholar</p>
-            <p>Relavent Corsework: Engineer Mechanics, Organic Chemistry, Biosystem Simulation, Molecular Biology, Graphic Communication, Engineering Design</p>
+          <div class="row experience-summary">
+            <div class="col-md-12 text-muted">
+              <ul>
+                <li><p>Completed self-paced (300 hour) technical certification in Fron End Software Engineering.</p></li>
+                <li><p>Will be creating various projects such as Responsive layout portfolio, Interactive photo gallery, Game show app, etc.</p></li>
+                <li><p>After Completion will be profiecnt in HTML, CSS, JavaScript, APIs, and React.</p></li>
+              </ul>
+            </div>
           </div>
+
+          <hr class="hr">
+
+          <div class="row experience-title">
+            <div class="col-md-9">
+              <h4>Mississippi State University</h4>
+              <h5 class="fw-light">Bachelors of Science in BioChemistry</h5>
+            </div>
+            <div class="col-md-3">
+              <h5>August 2020</h5>
+            </div>
+          </div>
+          <div class="row experience-summary">
+            <div class="col-md-12 text-muted">
+              <ul>
+                <li><p>Involvement: Lambda Sigma Honors Society, President Scholar, Phi Kappa Tau Fraternity, New Maroon Camp, Student Sucess Scholar</p></li>
+                <li><p>Relavent Corsework: Engineer Mechanics, Organic Chemistry, Biosystem Simulation, Molecular Biology, Graphic Communication, Engineering Design</p></li>
+              </ul>
+            </div>
+          </div>
+
         </div>
 
-        <div class="p-5">
+        <!-- WORK EXPERIENCE -->
+        <div *ngIf="view == 'work'" class="p-5">
+              <div class="row col-xs-12" style="border: solid 1px grey; background-color:grey;box-shadow: 5px 5px 12px 7px #0000003b;">
+                <div class="col-lg-2">aefgawef</div>
+                <div class="col-lg-10">
+                  <div class="row experience-title">
+                    <div class="col-md-9">
+                      <h4>Mississippi State University</h4>
+                      <h5 class="fw-light">Bachelors of Science in BioChemistry</h5>
+                    </div>
+                    <div class="col-md-3">
+                      <h5>August 2020</h5>
+                    </div>
+                  </div>
+                  <div class="row experience-summary">
+                    <div class="col-md-12 text-muted">
+                      <p>Involvement: Lambda Sigma Honors Society, President Scholar, Phi Kappa Tau Fraternity, New Maroon Camp, Student Sucess Scholar</p>
+                      <p>Relavent Corsework: Engineer Mechanics, Organic Chemistry, Biosystem Simulation, Molecular Biology, Graphic Communication, Engineering Design</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
           <div>
             <label>Application Developer</label>
             <span>Arlington Family Offices</span>
@@ -85,27 +141,39 @@ import { Component, OnInit } from '@angular/core';
           </div>
         </div>
 
-        <div class="p-5">
-          <div>
-            <label>Treehouse</label>
-            <span>Front End Web Development</span>
-            <p>Show Credential <i class="fa fa-arrow-up-right-from-square"></i></p>
+
+        <!-- SKILLS/CERTIFICATIONS -->
+        <div *ngIf="view == 'skills'" class="row p-5">
+          <div class="card m-3" style="width: 18rem;">
+            <img src="../assets/images/th.jpeg" class="card-img-top" alt="Treehouse Logo">
+            <div class="card-body">
+              <h5 class="card-title">Treehouse</h5>
+              <p class="fw-light my-0 card-text">Front-End Web Development</p>
+              <p class="text-muted my-0 card-info">Issued Apr 2022 &#183; No Expiration Date</p>
+              <p class="text-muted my-0 card-info">Credential ID 50180579</p>
+              <a href="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/50180579" target="_blank" class="btn btn-sm btn-outline-secondary">Show Credntial <i class="fa fa-arrow-up-right-from-square"></i></a>
+            </div>
           </div>
-          <div>
-            <label>JPMorgan Chase & Co.</label>
-            <span>Software Engineering Virtual Experience</span>
-            <p>Show Credential <i class="fa fa-arrow-up-right-from-square"></i></p>
+          <div class="card m-3" style="width: 18rem;">
+            <img src="../assets/images/jpm.jpeg" style="min-height:150px" class="card-img-top" alt="JP Morgan & Co Logo">
+            <div class="card-body">
+              <h5 class="card-title">JPMorgan Chase & Co.</h5>
+              <p class="fw-light my-0 card-text">Software Engineering Virtual Experience</p>
+              <p class="text-muted my-0 card-info">Issued Sept 2022 &#183; No Expiration Date</p>
+              <p class="text-muted my-0 card-info">Credential ID 3fJbwYsQ7SJ37SRMm</p>
+              <a href="https://insidesherpa.s3.amazonaws.com/completion-certificates/J.P.%20Morgan/R5iK7HMxJGBgaSbvk_JPMorgan%20Chase_Sst7JECWfG4A2gBf5_1631666386348_completion_certificate.pdf" target="_blank" class="btn btn-sm btn-outline-secondary">Show Credntial <i class="fa fa-arrow-up-right-from-square"></i></a>
+            </div>
           </div>
-  
+        </div>
+
+
+        <!-- WHAT'S NEXT? -->
+        <div *ngIf="view == 'future'" class="p-5">
+
+
+
         </div>
       </div>
-
-
-
-
-      RESUME
-
-
 
 
 
@@ -115,10 +183,18 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class ResumeComponent implements OnInit {
+  public view: string = 'edu';
 
   constructor() { }
 
   ngOnInit() { }
+
+  public changeView(path: string) {
+    console.log(path);
+    console.log(this.view);
+      
+  
+  }
 
 
 }

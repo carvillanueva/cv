@@ -48,7 +48,7 @@ import { Component, OnInit } from '@angular/core';
   
   `],
   template: `
-  <div class="container">
+  <div class="container fadePage">
     <div class="mb-4">
       <div class="py-5" style="text-align:center">
         <div class="mx-auto" style="max-width: 900px">
@@ -68,9 +68,9 @@ import { Component, OnInit } from '@angular/core';
       </div>
       <div class="col-md-7 px-4 mt-4">
         <h2 class="featurette-heading fw-normal lh-1">About me <p class="headerName text-muted">Carlos Villanueva</p></h2>
-        <p class="lead text-muted">I have a Bachelors of Science in Biochemistry from Mississippi State University. I originally wanted to attend Dental School but fell in love with programming. </p>
-        <p class="lead text-muted">I started as a self taught developer to get my feet wet. Over time I wanted to get a more formal education in software development. I chose Treehouse for their user friendly platform and self pace option.</p>
-        <p class="lead text-muted">I am currently a Junior Application Developer for a fintech company and use all the tricks Treehouse has taught me everyday.</p>
+        <p class="lead text-muted">I have a Bachelors of Science in Biochemistry from Mississippi State University. I originally had dreams of attending dental school but fell in love with programming. </p>
+        <p class="lead text-muted">I started as a self taught developer to get my feet wet. Over time I wanted to get a more formal education in software development which lead me to choose <span href="https://teamtreehouse.com/" target="_blank">Treehouse</span> for their user-friendly platform and self-pace option.</p>
+        <p class="lead text-muted">I am currently a Junior Application Developer for a fintech company and have loved working as a developer.</p>
         <p class="lead text-muted">Technologies and tools I've been working with recently:</p>
           <ul class="text-muted">
             <li>JavaScript</li>

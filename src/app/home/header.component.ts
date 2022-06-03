@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'main-header',
+  styles: [`
+
+  `],
   template: `
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
@@ -20,10 +23,7 @@ import { Component, OnInit } from '@angular/core';
       </div>
     </nav>
 
-  `,
-  styles: [`
-  
-  `]
+  `
 })
 
 
