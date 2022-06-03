@@ -28,6 +28,13 @@ import { Component, OnInit } from '@angular/core';
     .card-body{
       text-align: center;
     }
+    .card {
+      min-height:440px;
+    }
+    .card-img-top {
+      min-height: 230px;
+      max-height: 230px;
+    }
     .headerName {
       font-weight: 300;
       font-size: 16px;
@@ -52,8 +59,8 @@ import { Component, OnInit } from '@angular/core';
     <div class="mb-4">
       <div class="py-5" style="text-align:center">
         <div class="mx-auto" style="max-width: 900px">
-          <h1 class="display-2 fw-bold">Frontend Software Engineer & lifelong learner</h1>
-          <p class="fs-5 text-muted container-md">Hi. I am currently a frontend developer at a Family Office. I am always finding ways to better improve my skills and network with new people.</p>
+          <h1 class="display-2 fw-bold">Front End Software Engineer & Lifelong Learner</h1>
+          <p class="fs-5 text-muted container-md">Hi! Thanks for stopping by. I am currently an Application Developer at Arlington Family Offices. Feel free to contact me!</p>
           <button class="btn btn-md" type="button" style="background-color: #2e5077;"><a href="#portfolio">View my work</a></button>
         </div>
       </div>
@@ -94,8 +101,8 @@ import { Component, OnInit } from '@angular/core';
             <img class="card-img-top" src="../assets/images/employee-directory.png" alt="Employee Directory">
             <div class="card-body">
               <h4 class="card-title">API Employee Directory</h4>
-              <button onclick="window.location.href='https://github.com/carvillanueva/employeeDirectory/blob/master/index.html';" class="btn btn-small btn-outline-success">View Code</button>
-              <button onclick="window.location.href='https://carvillanueva.github.io/employeeDirectory/'" class="btn btn-small btn-outline-primary">Live Code</button>
+              <button onclick="window.location.href='https://github.com/carvillanueva/employeeDirectory/blob/master/index.html';" class="btn btn-small btn-outline-success mx-2">View Code</button>
+              <button onclick="window.location.href='https://carvillanueva.github.io/employeeDirectory/'" class="btn btn-small btn-outline-primary mx-2">Live SIte</button>
               <p class="card-text">JavaScript to fetch and display randomly-generated employee (www.randomuser.me) info from a third-party API.</p>
             </div>
           </div>
@@ -106,8 +113,8 @@ import { Component, OnInit } from '@angular/core';
             <img class="card-img-top" src="../assets/images/word-game.png" alt="Game Show">
             <div class="card-body">
               <h4 class="card-title">Game Show App</h4>
-              <button onclick="window.location.href='https://github.com/carvillanueva/Project-6/blob/main/index.html';"class="btn btn-small btn-outline-success">View Code</button>
-              <button onclick="window.location.href='https://carvillanueva.github.io/Project-6/'" class="btn btn-small btn-outline-primary">Live Code</button>
+              <button onclick="window.location.href='https://github.com/carvillanueva/Project-6/blob/main/index.html';"class="btn btn-small btn-outline-success mx-2">View Code</button>
+              <button onclick="window.location.href='https://carvillanueva.github.io/Project-6/'" class="btn btn-small btn-outline-primary mx-2">Live SIte</button>
               <p class="card-text">Uses Javascript to set a random phrase that players must guess by entering letters and create Guessing game show app. Similar to the popular WORDLE game.</p>
             </div>
           </div>
@@ -118,8 +125,8 @@ import { Component, OnInit } from '@angular/core';
             <img class="card-img-top" src="../assets/images/phot-gallery.png" alt="Photo Gallart">
 			      <div class="card-body">
               <h4 class="card-title">Interactive Photo Gallery</h4>
-              <button onclick="window.location.href='https://github.com/carvillanueva/Project-5/blob/main/index.html';" class="btn btn-small btn-outline-success">View Code</button>
-              <button onclick="window.location.href='https://carvillanueva.github.io/Project-5/'" class="btn btn-small btn-outline-primary">Live Code</button>
+              <button onclick="window.location.href='https://github.com/carvillanueva/Project-5/blob/main/index.html';" class="btn btn-small btn-outline-success mx-2">View Code</button>
+              <button onclick="window.location.href='https://carvillanueva.github.io/Project-5/'" class="btn btn-small btn-outline-primary mx-2">Live SIte</button>
 			        <p class="card-text">An interactive searchable photo gallery created using the most popular programming language JavaScript.</p>
 			      </div>
 			    </div>
@@ -130,8 +137,8 @@ import { Component, OnInit } from '@angular/core';
             <img class="card-img-top" src="../assets/images/interactive-form.png" alt="Ecma">
 			      <div class="card-body">
               <h4 class="card-title">Online Registration Form</h4>
-              <button onclick="window.location.href='https://github.com/carvillanueva/Project-3/blob/main/index.html';" class="btn btn-small btn-outline-success">View Code</button>
-              <button onclick="window.location.href='https://carvillanueva.github.io/Project-3/'" class="btn btn-small btn-outline-primary">Live Code</button>
+              <button onclick="window.location.href='https://github.com/carvillanueva/Project-3/blob/main/index.html';" class="btn btn-small btn-outline-success mx-2">View Code</button>
+              <button onclick="window.location.href='https://carvillanueva.github.io/Project-3/'" class="btn btn-small btn-outline-primary mx-2">Live SIte</button>
 			        <p class="card-text">A responsive, mobile-first registration form using a variety of HTML form elements. There is a variety of CSS styles that were used to design.</p>
 			      </div>
 			    </div>
@@ -147,7 +154,7 @@ import { Component, OnInit } from '@angular/core';
 			    </div>
 				</div>
         
-				<div class="col-md-6 col-lg-4">
+				<!-- <div class="col-md-6 col-lg-4">
           <div class="card">
             <img class="card-img-top" src="../assets/images/coming soon.png" alt="Coming Soon">
 			      <div class="card-body">
@@ -155,7 +162,7 @@ import { Component, OnInit } from '@angular/core';
 			        <p class="card-text">Currently creating my business website that will allow me to create website for others. C-Studios LLC. (coming soon)</p>
 			      </div>
 			    </div>
-				</div>
+				</div> -->
 			</div>
     </div>
       <!-- /portfolio -->
@@ -223,7 +230,7 @@ import { Component, OnInit } from '@angular/core';
             </div>
 
             <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-              <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Send</button>
+              <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Send <i class="fa-solid fa-paper-plane"></i></button>
             </div>
             <p class="message-disclaimer text-muted fs-6">*Please allow 2 business days to respond. Thank you.</p>
         </form>

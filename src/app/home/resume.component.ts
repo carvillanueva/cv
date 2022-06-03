@@ -16,9 +16,14 @@ import { Component, OnInit } from '@angular/core';
       display:inline-block;
       width:100%;
     }
+    .view-selected {
+      background-color: lightgrey;
+      border-radius: 8px;
+      padding: 5px
+    }
     .resume-category span:hover {
       background-color: lightgrey;
-      transition: .5s ease-in-out;
+      transition: .25s ease-in-out;
       border-radius: 8px;
       padding-left: 3px;
       padding-right: 3px;
@@ -34,6 +39,19 @@ import { Component, OnInit } from '@angular/core';
     .info-list li {
       list-style-type:none;
       display:inline-block;
+    }
+    .skills-list {
+      list-style-type: none;
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      padding-left: 1rem;
+    }
+    .skills-list li::before {
+      content: "8"; 
+      padding-right:10px; 
+      font-family:"Webdings"; 
+      color: #2e5077; 
     }
  
   `],
@@ -57,13 +75,13 @@ import { Component, OnInit } from '@angular/core';
         </div>
       </div>
 
-      <div class="col-xs-12">
-        <div class=" mt-5 resume-category">
+      <div class="col-xs-12 mb-5">
+        <div class="mt-5 resume-category">
           <ul>
-            <li><span (click)="view = 'edu'">Education</span></li>
-            <li><span (click)="view = 'work'">Work Experience</span></li>
-            <li><span (click)="view = 'skills'">Skills/Certifcations</span></li>
-            <li> <span (click)="view = 'future'">What's Next?</span></li>
+            <li><span (click)="view = 'edu'" [ngClass]="{'view-selected': view == 'edu'}">Education</span></li>
+            <li><span (click)="view = 'work'" [ngClass]="{'view-selected': view == 'work'}">Work Experience</span></li>
+            <li><span (click)="view = 'skills'" [ngClass]="{'view-selected': view == 'skills'}">Skills/Certifcations</span></li>
+            <li> <span (click)="view = 'future'" [ngClass]="{'view-selected': view == 'future'}">What's Next?</span></li>
           </ul>
         </div>
 
@@ -76,7 +94,7 @@ import { Component, OnInit } from '@angular/core';
               <h5 class="fw-light">Front End Web Development</h5>
             </div>
             <div class="col-md-3">
-              <h5>April 2022</h5>
+              <h5 class="float-end">April 2022</h5>
             </div>
           </div>
           <div class="row experience-summary">
@@ -97,7 +115,7 @@ import { Component, OnInit } from '@angular/core';
               <h5 class="fw-light">Bachelors of Science in BioChemistry</h5>
             </div>
             <div class="col-md-3">
-              <h5>August 2020</h5>
+              <h5 class="float-end">August 2020</h5>
             </div>
           </div>
           <div class="row experience-summary">
@@ -108,51 +126,50 @@ import { Component, OnInit } from '@angular/core';
               </ul>
             </div>
           </div>
-
         </div>
 
         <!-- WORK EXPERIENCE -->
         <div *ngIf="view == 'work'" class="p-5">
-              <div class="row col-xs-12" style="border: solid 1px grey; background-color:rgba(255,255,255,.1);
-;box-shadow: 5px 5px 12px 7px #0000003b;">
-                <div class="col-lg-2">aefgawef</div>
-                <div class="col-lg-10">
-                  <div class="row experience-title">
-                    <div class="col-md-9">
-                      <h4>Mississippi State University</h4>
-                      <h5 class="fw-light">Bachelors of Science in BioChemistry</h5>
-                    </div>
-                    <div class="col-md-3">
-                      <h5>August 2020</h5>
-                    </div>
-                  </div>
-                  <div class="row experience-summary">
-                    <div class="col-md-12 text-muted">
-                      <p>Involvement: Lambda Sigma Honors Society, President Scholar, Phi Kappa Tau Fraternity, New Maroon Camp, Student Sucess Scholar</p>
-                      <p>Relavent Corsework: Engineer Mechanics, Organic Chemistry, Biosystem Simulation, Molecular Biology, Graphic Communication, Engineering Design</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-          <div>
-            <label>Application Developer</label>
-            <span>Arlington Family Offices</span>
-            <span>Birmingham, AL</span>
-            <span>July 2021 - Present</span>
-            <p>Design, develop, test, and maintain application code to meet business requirments, all while working with various technologies including HTML, CSS, JavaScript/TypeScript, Angular, SQL, and C#.</p>
-            <p>Prepare reports, manuals, and other documentation on the status, operation, and maintenance of software.</p>
-            <p>Cross train with teams within Arlington to gain an understanding of the business holistically to produce a high-quality development principle while delievering solutions promptly.</p>
+          <div class="row experience-title">
+            <div class="col-md-9">
+              <h4>Application Developer</h4>
+              <h5 class="fw-light">Arlington Family Offices</h5>
+              <h6 class="fw-light">Birmingham, AL</h6>
+            </div>
+            <div class="col-md-3">
+              <h5 class="float-end">July 2021 - Present</h5>
+            </div>
           </div>
-          <div>
-            <label>Analytical Chemist</label>
-            <span>WST Energy</span>
-            <span>Birmingham, AL</span>
-            <span>October 2020 - June 2021</span>
-            <p>Develop, implement, and maintain analytical lab methods for use in product development, problem solving, and customer assistance.</p>
-            <p>Identify and make recommendation for improvements as part of a small team within or outside the department in order to ensure continuous improvemnt.</p>
-            <p>Perform routine performance checks to instruments that are being used for project support (e.g., ICP, UV-VIS spectroscopy, Auto Titrator, Pressure Cells, Etc.)</p>
+          <div class="row experience-summary">
+            <div class="col-md-12 text-muted">
+              <ul>
+                <li><p>Design, develop, test, and maintain application code to meet business requirments, all while working with various technologies including HTML, CSS, JavaScript/TypeScript, Angular, SQL, and C#.</p></li>
+                <li><p>Prepare reports, manuals, and other documentation on the status, operation, and maintenance of software.</p></li>
+                <li><p>Cross train with teams within Arlington to gain an understanding of the business holistically to produce a high-quality development principle while delievering solutions promptly.</p></li>
+              </ul>
+            </div>
+          </div>
+
+          <hr class="hr">
+
+          <div class="row experience-title">
+            <div class="col-md-9">
+              <h4>Analytical Chemist</h4>
+              <h5 class="fw-light">WST Energy</h5>
+              <h6 class="fw-light">Birmingham, AL</h6>
+            </div>
+            <div class="col-md-3">
+              <h5 class="float-end">October 2020 - June 2021</h5>
+            </div>
+          </div>
+          <div class="row experience-summary">
+            <div class="col-md-12 text-muted">
+              <ul>
+                <li><p>Develop, implement, and maintain analytical lab methods for use in product development, problem solving, and customer assistance.</p></li>
+                <li><p>Identify and make recommendation for improvements as part of a small team within or outside the department in order to ensure continuous improvemnt.</p></li>
+                <li><p>Perform routine performance checks to instruments that are being used for project support (e.g., ICP, UV-VIS spectroscopy, Auto Titrator, Pressure Cells, Etc.)</p></li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -161,8 +178,18 @@ import { Component, OnInit } from '@angular/core';
         <div *ngIf="view == 'skills'" class="row p-5">
           <div class="col-xs-12 col-lg-5">
             <label><u>Skills</u></label>
-
-
+            <ul class="text-muted skills-list p-3">
+              <li>JavaScript</li>
+              <li>Next.js</li>
+              <li>Angular</li>
+              <li>C#</li>
+              <li>Microsoft Azure Cloud</li>
+              <li>TypeScript</li>
+              <li>APIs</li>
+              <li>SQL</li>
+              <li>Spanish</li>
+              <li>French</li>
+            </ul>
           </div>
           <div class="row col-xs-12 col-lg-7">
             <label><u>Certifications</u></label>
