@@ -134,7 +134,7 @@ import { Component, OnInit } from '@angular/core';
         
 				<div class="col-md-6 col-lg-4">
           <div class="card mb-3">
-            <img class="card-img-top" src="../assets/images/interactive-form.png" alt="Ecma">
+            <img class="card-img-top" src="../assets/images/interactive-form.png" alt="Online Registration Form">
 			      <div class="card-body">
               <h4 class="card-title">Online Registration Form</h4>
               <button onclick="window.location.href='https://github.com/carvillanueva/Project-3/blob/main/index.html';" class="btn btn-small btn-outline-success mx-2">View Code</button>

@@ -11,17 +11,12 @@ import { Component, OnInit } from '@angular/core';
     .btn-social-icon a {
       color:white;
     }
-    .resume-category li {
-      list-style-type:none;
-      display:inline-block;
-      width:100%;
-    }
     .view-selected {
       background-color: lightgrey;
       border-radius: 8px;
       padding: 5px
     }
-    .resume-category span:hover {
+    .resume-category li:hover {
       background-color: lightgrey;
       transition: .25s ease-in-out;
       border-radius: 8px;
@@ -56,7 +51,7 @@ import { Component, OnInit } from '@angular/core';
  
   `],
   template: `
-    <div class="container fadePage">
+    <div class="container">
       <div class="col-xs-12 text-center">
         <img class="img-round resume-img mb-2" src="../assets/images/headshot.jpeg" alt="Head shot of Carlos">
         <div class="template-demo text-center mb-2"> 
@@ -76,15 +71,14 @@ import { Component, OnInit } from '@angular/core';
       </div>
 
       <div class="col-xs-12 mb-5">
-        <div class="mt-5 resume-category">
-          <ul>
-            <li><span (click)="view = 'edu'" [ngClass]="{'view-selected': view == 'edu'}">Education</span></li>
-            <li><span (click)="view = 'work'" [ngClass]="{'view-selected': view == 'work'}">Work Experience</span></li>
-            <li><span (click)="view = 'skills'" [ngClass]="{'view-selected': view == 'skills'}">Skills/Certifcations</span></li>
-            <li> <span (click)="view = 'future'" [ngClass]="{'view-selected': view == 'future'}">What's Next?</span></li>
+        <div class="d-flex justify-content-center mt-5 resume-category ">
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a class="nav-link" (click)="view = 'edu'" [ngClass]="{'view-selected': view == 'edu'}">Education</a></li>
+            <li class="nav-item"><a class="nav-link" (click)="view = 'work'" [ngClass]="{'view-selected': view == 'work'}">Work Experience</a></li>
+            <li class="nav-item"><a class="nav-link" (click)="view = 'skills'" [ngClass]="{'view-selected': view == 'skills'}">Skills/Certifications</a></li>
+            <li class="nav-item"><a class="nav-link" (click)="view = 'future'" [ngClass]="{'view-selected': view == 'future'}">What's Next?</a></li>
           </ul>
         </div>
-
 
         <!-- EDUCATION -->
         <div *ngIf="view == 'edu'" class="p-5">
@@ -112,7 +106,7 @@ import { Component, OnInit } from '@angular/core';
           <div class="row experience-title">
             <div class="col-md-9">
               <h4>Mississippi State University</h4>
-              <h5 class="fw-light">Bachelors of Science in BioChemistry</h5>
+              <h5 class="fw-light">Bachelors of Science in Biochemistry</h5>
             </div>
             <div class="col-md-3">
               <h5 class="float-end">August 2020</h5>
