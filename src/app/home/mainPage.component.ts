@@ -146,7 +146,7 @@ import { Component, OnInit } from '@angular/core';
         
 				<div class="col-md-6 col-lg-4">
           <div class="card mb-3">
-            <img class="card-img-top" src="../assets/images/coming soon.png" alt="Coming Soon">
+            <img class="card-img-top" src="../assets/images/coming-soon.png" alt="Coming Soon">
 			      <div class="card-body">
               <h4 class="card-title">Coming Soon...</h4>
 			        <p class="card-text">Currently creating a small business website. This will allow me to gain real world experience and have a start to my personal brand.</p>
