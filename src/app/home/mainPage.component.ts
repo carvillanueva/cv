@@ -146,7 +146,7 @@ import { Component, OnInit } from '@angular/core';
         
 				<div class="col-md-6 col-lg-4">
           <div class="card mb-3">
-            <img class="card-img-top" src="../assets/images/coming-soon.png" alt="Coming Soon">
+            <img class="card-img-top" src="../assets/images/coming soon.png" alt="Coming Soon">
 			      <div class="card-body">
               <h4 class="card-title">Coming Soon...</h4>
 			        <p class="card-text">Currently creating a small business website. This will allow me to gain real world experience and have a start to my personal brand.</p>
@@ -185,7 +185,6 @@ import { Component, OnInit } from '@angular/core';
         <form class="row col-xs-12 g-3" action="https://formsubmit.co/carlos2villanueva@gmail.com" method="POST">
           <!-- HoneyPot -->
           <input type="text" name="_honey" style="display:none">
-
           <!-- Disable Captcha -->
           <input type="hidden" name="_captcha" value="false">
 
@@ -229,7 +228,7 @@ import { Component, OnInit } from '@angular/core';
               </div>
             </div>
 
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+            <div class="mb-4 mb-lg-3">
               <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Send <i class="fa-solid fa-paper-plane"></i></button>
             </div>
             <p class="message-disclaimer text-muted fs-6">*Please allow 2 business days to respond. Thank you.</p>
