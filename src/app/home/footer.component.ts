@@ -29,7 +29,7 @@ import { Component, OnInit } from '@angular/core';
         </a>
         
         <ul class="nav col-md-4 justify-content-md-end justify-content-center">
-          <li class="nav-item"><a [routerLink]="['/main']" class="nav-link px-2">Home <i class="fa fa-house-user"></i></a></li>
+          <li class="nav-item"><a href="/" class="nav-link px-2">Home <i class="fa fa-house-user"></i></a></li>
           <li class="nav-item"><a href="#portfolio" class="nav-link px-2">Work <i class="fa fa-briefcase"></i></a></li>
           <li class="nav-item"><a [routerLink]="['/resume']" class="nav-link px-2">Resume <i class="fa fa-newspaper"></i></a></li>
           <li class="nav-item"><a href="#contact" class="nav-link px-2">Contact <span class="fa fa-address-card"></span></a></li>

@@ -23,6 +23,7 @@ import { ResumeComponent } from './home/resume.component';
     RouterModule.forRoot([
       { path: 'main', component: MainPageComponent },
       { path: 'resume', component: ResumeComponent },
+      { path: '', component: MainPageComponent },
     ]),
   ],
   providers: [],

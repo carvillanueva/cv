@@ -171,7 +171,7 @@ import { Component, OnInit } from '@angular/core';
         <!-- SKILLS/CERTIFICATIONS -->
         <div *ngIf="view == 'skills'" class="row p-5">
           <div class="col-xs-12 col-lg-5">
-            <label><u>Skills</u></label>
+            <label class="fs-5"><u>Skills</u></label>
             <ul class="text-muted skills-list p-3">
               <li>JavaScript</li>
               <li>Next.js</li>
@@ -186,7 +186,7 @@ import { Component, OnInit } from '@angular/core';
             </ul>
           </div>
           <div class="row col-xs-12 col-lg-7">
-            <label><u>Certifications</u></label>
+            <label class="fs-5"><u>Certifications</u></label>
             <div class="card m-3" style="width: 18rem;">
               <img src="../assets/images/th.jpeg" class="card-img-top" alt="Treehouse Logo">
               <div class="card-body">
@@ -212,7 +212,8 @@ import { Component, OnInit } from '@angular/core';
 
 
         <!-- WHAT'S NEXT? -->
-        <div *ngIf="view == 'future'" class="p-5">
+        <div *ngIf="view == 'future'" class="p-5 text-center">
+          <label class="fs-5"><u>What's Next?</u></label>
 
 
 

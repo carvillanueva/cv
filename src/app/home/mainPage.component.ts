@@ -55,7 +55,7 @@ import { Component, OnInit } from '@angular/core';
   
   `],
   template: `
-  <div class="container fadePage">
+  <div class="container fadePage" id="main">
     <div class="mb-4">
       <div class="py-5" style="text-align:center">
         <div class="mx-auto" style="max-width: 900px">
