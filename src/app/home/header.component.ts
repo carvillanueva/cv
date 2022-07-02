@@ -19,7 +19,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="py-2 navbar-brand" [routerLink]="['/main']"><img src="../favicon.ico" atl="Website Logo"></a>
+        <a class="py-2 navbar-brand" [routerLink]="['/main']"><img src="favicon.ico" atl="Website Logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

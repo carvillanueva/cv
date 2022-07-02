@@ -70,7 +70,7 @@ import { Component, OnInit } from '@angular/core';
     <div class="row featurette container">
       <div class="col-md-5">
         <div class="image-holder">
-          <img src="../assets/profile.jpg" class="profile-img" alt="Picture of Carlos">
+          <img src="assets/profile.jpg" class="profile-img" alt="Picture of Carlos">
         </div>
       </div>
       <div class="col-md-7 px-4 mt-4">
