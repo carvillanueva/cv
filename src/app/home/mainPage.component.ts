@@ -146,7 +146,7 @@ import { Component, OnInit } from '@angular/core';
         
 				<div class="col-md-6 col-lg-4">
           <div class="card mb-3">
-            <img class="card-img-top" src="../assets/images/coming soon.png" alt="Coming Soon">
+            <img class="card-img-top" src="../assets/images/coming-soon.png" alt="Coming Soon">
 			      <div class="card-body">
               <h4 class="card-title">Coming Soon...</h4>
 			        <p class="card-text">Currently creating a small business website. This will allow me to gain real world experience and have a start to my personal brand.</p>
@@ -178,8 +178,6 @@ import { Component, OnInit } from '@angular/core';
             <button class="btn btn-social-icon btn-github"><a href="https://github.com/carvillanueva" target="_blank"><i class="fab fa-github"></i></a></button> 
             <button class="btn btn-social-icon btn-linkedin"><a href="https://www.linkedin.com/in/carlosivillanueva/" target="_blank"><i class="fa fa-linkedin"></i></a></button> 
             <button class="btn btn-social-icon btn-instagram"><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></button>
-            <button data-toggle="modal" data-target="#contact" class="btn btn-social-icon btn-other "><i class="fas fa-envelope"></i></button>
-            <button class="btn btn-social-icon btn-other"><a href="../assets/TEST.pdf" download="TEST.pdf"><i class="fas fa-file-pdf"></i></a></button>
           </div>
         </div>
         <form class="row col-xs-12 g-3" action="https://formsubmit.co/carlos2villanueva@gmail.com" method="POST">
