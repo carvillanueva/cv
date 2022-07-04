@@ -57,9 +57,7 @@ import { Component, OnInit } from '@angular/core';
         <div class="template-demo text-center mb-2"> 
           <button class="btn btn-social-icon btn-github"><a href="https://github.com/carvillanueva" target="_blank"><i class="fab fa-github"></i></a></button> 
           <button class="btn btn-social-icon btn-linkedin"><a href="https://www.linkedin.com/in/carlosivillanueva/" target="_blank"><i class="fa fa-linkedin"></i></a></button> 
-          <button class="btn btn-social-icon btn-instagram"><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></button>
-          <button data-toggle="modal" data-target="#contact" class="btn btn-social-icon btn-other "><i class="fas fa-envelope"></i></button>
-          <button class="btn btn-social-icon btn-other"><a href="../assets/TEST.pdf" download="TEST.pdf"><i class="fas fa-file-pdf"></i></a></button>
+          <button class="btn btn-social-icon btn-instagram disabled"><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></button>
         </div>
         <div class="text-muted fs-6">
           <ul class="info-list">

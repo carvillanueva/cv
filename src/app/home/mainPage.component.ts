@@ -20,7 +20,7 @@ import { Component, OnInit } from '@angular/core';
       padding-left: 1rem;
     }
     li::before {
-      content: "8"; 
+      content: "'"; 
       padding-right:10px; 
       font-family:"Webdings"; 
       color: #2e5077; 
@@ -167,7 +167,6 @@ import { Component, OnInit } from '@angular/core';
     </div>
       <!-- /portfolio -->
       
-      
     <div class="container mx-auto my-5" id="contact" style="max-width:650px;">
       <div class="row p-4 align-items-center rounded-3 border shadow-lg">
         <div class="col-xs-12 p-3 text-center">
@@ -177,60 +176,11 @@ import { Component, OnInit } from '@angular/core';
           <div class="template-demo text-center mb-2"> 
             <button class="btn btn-social-icon btn-github"><a href="https://github.com/carvillanueva" target="_blank"><i class="fab fa-github"></i></a></button> 
             <button class="btn btn-social-icon btn-linkedin"><a href="https://www.linkedin.com/in/carlosivillanueva/" target="_blank"><i class="fa fa-linkedin"></i></a></button> 
-            <button class="btn btn-social-icon btn-instagram"><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></button>
+            <button class="btn btn-social-icon btn-instagram disabled"><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></button>
           </div>
         </div>
-        <form class="row col-xs-12 g-3" action="https://formsubmit.co/carlos2villanueva@gmail.com" method="POST">
-          <!-- HoneyPot -->
-          <input type="text" name="_honey" style="display:none">
-          <!-- Disable Captcha -->
-          <input type="hidden" name="_captcha" value="false">
-
-            <div class="col-sm-6">
-              <label for="firstName" class="form-label">First name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="John" name="name" required>
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
-            </div>
-
-            <div class="col-sm-6">
-              <label for="lastName" class="form-label">Last name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="Doe" name="Last&nbsp;Name" required>
-              <div class="invalid-feedback">
-                Valid last name is required.
-              </div>
-            </div>
-
-            <div class="col-12">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com" name="email" required>
-              <div class="invalid-feedback">
-                Please enter a valid email address.
-              </div>
-            </div>
-
-            <div class="col-12">
-              <label for="address" class="form-label">Subject</label>
-              <input type="text" class="form-control" id="address" placeholder="Networking" name="subject" required>
-              <div class="invalid-feedback">
-                Please enter a subject.
-              </div>
-            </div>
-
-            <div class="col-12">
-              <label class="form-label">Message</label>
-              <textarea type="text" class="form-control" row="5" placeholder="Do you want to be friends?:)" name="message" required></textarea>
-              <div class="invalid-feedback">
-                Please enter a message.
-              </div>
-            </div>
-
-            <div class="mb-4 mb-lg-3">
-              <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Send <i class="fa-solid fa-paper-plane"></i></button>
-            </div>
-            <p class="message-disclaimer text-muted fs-6">*Please allow 2 business days to respond. Thank you.</p>
-        </form>
+        <!-- form - elfsight -->
+        <div class="elfsight-app-5b4c3435-a56c-41da-842c-3a10ae8e6a61"></div>
       </div>
     </div>
 
