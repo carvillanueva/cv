@@ -50,7 +50,9 @@ import { Component, OnInit } from '@angular/core';
       position: relative;
       z-index: 5;
     }
-
+    .card-text {
+      margin-top: 15px;
+    }
     
   
   `],
@@ -58,7 +60,7 @@ import { Component, OnInit } from '@angular/core';
   <div class="container fadePage" id="main">
     <div class="mb-4">
       <div class="py-5" style="text-align:center">
-        <div class="mx-auto" style="max-width: 900px">
+        <div class="mx-auto" style="max-width: 950px">
           <h1 class="display-2 fw-bold">Front End Software Engineer & Lifelong Learner</h1>
           <p class="fs-5 text-muted container-md">Hi! Thanks for stopping by. I am currently an Application Developer at Arlington Family Offices. Feel free to contact me!</p>
           <button class="btn btn-md" type="button" style="background-color: #2e5077;"><a href="#portfolio">View my work</a></button>
